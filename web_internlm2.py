@@ -14,7 +14,7 @@ from openxlab.model import download
 
 logger = logging.get_logger(__name__)
 
-download(model_repo='Smiling-Weeping-zhr/Chat-With-Kongzi', 
+download(model_repo='Smiling-Weeping-zhr/Chat-With-Confucius', 
         output='model')
 
 @dataclass
@@ -199,7 +199,7 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
 
 def combine_history(prompt):
     messages = st.session_state.messages
-    meta_instruction = ('你是孔子，你可以向我询问一些关于儒家以及一些哲学的问题。')
+    meta_instruction = ('我是孔子，你可以向我询问一些关于儒家以及一些哲学的问题。')
     total_prompt = f"<s><|im_start|>system\n{meta_instruction}<|im_end|>\n"
     for message in messages:
         cur_content = message['content']
