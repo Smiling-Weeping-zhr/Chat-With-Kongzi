@@ -220,8 +220,8 @@ def main():
     model, tokenizer = load_model()
     print('load model end.')
 
-    user_avator = 'assets/user.jpg'
-    robot_avator = 'assets/robot.jpg'
+    user_avator = 'assets/shusheng.jpg'
+    robot_avator = 'assets/kongzi.jpg'
 
     st.title('与孔子对话')
 
